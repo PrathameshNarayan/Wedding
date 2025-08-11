@@ -1,106 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wedding Invitation</title>
-    <style>
-        body {
-            background-color: #a8cbe6; /* Soft blue background */
-            font-family: 'Georgia', serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
-
-        .invitation {
-            border: 6px solid gold;
-            padding: 40px;
-            margin: 50px auto;
-            width: 60%;
-            background-color: #ffffff10; /* Slight transparent white overlay */
-            color: white;
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-            border-radius: 15px;
-        }
-
-        h1, h2, h3 {
-            margin: 10px 0;
-            color: white;
-        }
-
-        h1 {
-            font-size: 2em;
-        }
-
-        h3 {
-            font-size: 1.3em;
-            font-weight: normal;
-        }
-
-        .highlight {
-            font-weight: bold;
-            font-size: 1.3em;
-            color: gold;
-        }
-
-        .event {
-            border: 2px solid gold;
-            padding: 15px;
-            display: inline-block;
-            margin: 15px;
-            width: 40%;
-            background-color: #ffffff15;
-            border-radius: 10px;
-        }
-
-        p {
-            font-size: 1.1em;
-            margin: 5px 0;
-        }
-
-        .venue {
-            border: 2px solid gold;
-            margin-top: 25px;
-            padding: 20px;
-            border-radius: 10px;
-            background-color: #ffffff15;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prathamesh Wedding Invitation</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #c6dff0;  /* Soft sky-blue background */
+      font-family: Georgia, serif;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .invitation {
+      background-color: #f0fbff;
+      padding: 40px;
+      max-width: 700px;
+      width: 90%;
+      text-align: center;
+      border: 4px solid #4a90e2;  /* Blue border */
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .subtle {
+      color: #555;
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    h1 {
+      font-size: 2em;
+      margin: 15px 0;
+      color: #4a90e2;  /* Matching blue for headings */
+    }
+    h2 {
+      font-size: 1.6em;
+      margin: 10px 0;
+      color: #1a3f6b; /* Darker blue accents */
+    }
+    .event-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin: 25px 0;
+    }
+    .card {
+      border: 2px solid #4a90e2;
+      border-radius: 8px;
+      padding: 18px 25px;
+      width: 45%;
+      background-color: #e8f4fc;
+    }
+    .card-title {
+      font-size: 1.2em;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #4a90e2;
+    }
+    .venue {
+      margin-top: 20px;
+      border-top: 2px solid #4a90e2;
+      padding-top: 20px;
+    }
+    .venue h2 {
+      margin-top: 0;
+    }
+    .footer {
+      margin-top: 25px;
+      color: #555;
+      font-size: 0.95em;
+    }
+    .your-name {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #1a3f6b;
+    }
+    @media (max-width: 600px) {
+      .card { width: 100%; }
+    }
+  </style>
 </head>
 <body>
-    <div class="invitation">
-        <h3>|| Shree Sreckanteshwara Prasanna ||</h3>
-        <p>With the blessings of</p>
-        <h1>Chi. Ra. Adikarthik Shankar</h1>
-        <p>(Son of Smt. N Sujatha & Sri B.V Ravishankar)</p>
-        <p>weds</p>
-        <h1>Chi. Sou. Dr. Nishu Srinivas</h1>
-        <p>(Daughter of Smt. Jayanthi & Shri Srinivasa)</p>
-
-        <h2>Wedding Celebrations</h2>
-
-        <div class="event">
-            <h3>👑 Reception</h3>
-            <p>Sunday,<br>17th August 2025<br>7:00 PM onwards</p>
-        </div>
-
-        <div class="event">
-            <h3>🕉 Muhurtham</h3>
-            <p>Monday,<br>18th August 2025</p>
-        </div>
-
-        <div class="venue">
-            <h2>Venue</h2>
-            <p>GNR Kalyana Mantapa<br>
-            18th Main Road, 4th T Block Jayanagar<br>
-            Near Ragigudda Metro Station<br>
-            Bengaluru – 560069</p>
-        </div>
-
-        <p style="margin-top:20px;"><em>With best compliments from Relatives & Friends</em></p>
-        <p>Your presence will make this moment even more special</p>
-        <p class="highlight">Prathamesh V Narayan</p>
+  <div class="invitation">
+    <h1>Shree Sreckanteshwara Prasanna</h1>
+    <p class="subtle">With the blessings of</p>
+    <h2>Chi. Ra. Adikarthik Shankar</h2>
+    <p class="subtle">(Son of Smt. N Sujatha &amp; Sri B.V Ravishankar)</p>
+    <p>weds</p>
+    <h2>Chi. Sou. Dr. Nishu Srinivas</h2>
+    <p class="subtle">(Daughter of Smt. Jayanthi &amp; Shri Srinivasa)</p>
+    <h2>Wedding Celebrations</h2>
+    <div class="event-section">
+      <div class="card">
+        <div class="card-title">Reception</div>
+        <p>Sunday, 17th August 2025<br>7:00 PM onwards</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Muhurtham</div>
+        <p>Monday, 18th August 2025<br>10:00 AM – 10:50 AM</p>
+      </div>
     </div>
+    <div class="venue">
+      <h2>Venue</h2>
+      <p>GNR Kalyana Mantapa<br>
+      18th Main Road, 4th T Block Jayanagar<br>
+      Near Ragigudda Metro Station<br>
+      Bengaluru – 560069</p>
+    </div>
+    <p class="footer"><em>With best compliments from Relatives &amp; Friends</em></p>
+    <p class="footer">Your presence will make this moment even more special</p>
+    <div class="your-name">Prathamesh V Narayan</div>
+  </div>
 </body>
 </html>
