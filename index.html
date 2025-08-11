@@ -1,234 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Wedding Invitation with Falling Petals</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #fdf6e3, #fceabb, #f8e1ba);
-    font-family: 'Playfair Display', serif;
-    color: #5a4634;
-    overflow-x: hidden;
-  }
-
-  .invitation {
-    position: relative;
-    max-width: 850px;
-    margin: 50px auto;
-    background: white;
-    border-radius: 20px;
-    padding: 40px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    border: 6px solid #d4af37;
-    animation: fadeIn 1.5s ease-out;
-    overflow: visible;
-  }
-
-  h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 60px;
-    color: #a67c00;
-    margin-bottom: 10px;
-  }
-
-  h2 {
-    font-size: 26px;
-    color: #8b5e3c;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-
-  .highlight {
-    color: #d4af37;
-    font-weight: bold;
-  }
-
-  .section {
-    font-size: 18px;
-    line-height: 1.8;
-  }
-
-  small {
-    color: #777;
-    font-size: 14px;
-  }
-
-  .divider {
-    border-top: 2px dashed #d4af37;
-    margin: 30px auto;
-    width: 60%;
-  }
-
-  .footer {
-    margin-top: 20px;
-    font-size: 16px;
-    color: #7c6f57;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chi. Ra. Adikarthik Shankar & Nishu Srinivas Wedding</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Open+Sans&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    to {
-      opacity: 1;
-      transform: translateY(0);
+    .script-font {
+      font-family: 'Parisienne', cursive;
     }
-  }
-
-  /* Falling petal animation */
-  @keyframes fall {
-    0% {
-      transform: translateY(-50px) rotate(0deg);
-      opacity: 1;
+    .custom-hr {
+      border: none;
+      height: 3px;
+      margin: 1.5rem auto;
+      width: 100%;
+      background: linear-gradient(to right, transparent, #3b82f6, #93c5fd, #3b82f6, transparent);
+      border-radius: 9999px;
+      box-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
     }
-    100% {
-      transform: translateY(350px) rotate(360deg);
-      opacity: 0;
+    /* Neat double border with subtle shadow */
+    .invitation-border {
+      border: 3px solid #3b82f6; /* Blue border */
+      border-radius: 1rem; /* Rounded corners */
+      padding: 2px; /* space for shadow */
+      box-shadow:
+        0 0 8px rgba(59, 130, 246, 0.4),
+        0 0 0 4px #dbeafe; /* Light blue outer glow */
+      background-clip: padding-box;
     }
-  }
-
-  /* Petal styles */
-  .petal {
-    position: absolute;
-    top: 0;
-    width: 24px;
-    height: 24px;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23d4af37" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C10.43 3.57 8.95 5.56 7.52 8.15C6.03 10.82 5 13.44 5 15C5 17.21 6.79 19 9 19C10.48 19 12.49 18 14.25 16.26C16.23 14.32 18 11.64 18 10C18 6 14 2 12 2Z"/></svg>');
-    background-repeat: no-repeat;
-    background-size: contain;
-    opacity: 0.9;
-    animation-name: fall;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-  }
-
-  /* Different petals with different horizontal positions, speeds, and delays */
-  .petal:nth-child(1) {
-    left: 5%;
-    animation-duration: 12s;
-    animation-delay: 0s;
-  }
-
-  .petal:nth-child(2) {
-    left: 25%;
-    animation-duration: 15s;
-    animation-delay: 4s;
-    width: 18px;
-    height: 18px;
-    opacity: 0.7;
-  }
-
-  .petal:nth-child(3) {
-    left: 45%;
-    animation-duration: 10s;
-    animation-delay: 2s;
-    width: 22px;
-    height: 22px;
-    opacity: 0.8;
-  }
-
-  .petal:nth-child(4) {
-    left: 65%;
-    animation-duration: 14s;
-    animation-delay: 6s;
-    width: 20px;
-    height: 20px;
-    opacity: 0.85;
-  }
-
-  .petal:nth-child(5) {
-    left: 85%;
-    animation-duration: 13s;
-    animation-delay: 1s;
-    width: 16px;
-    height: 16px;
-    opacity: 0.75;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    .invitation {
-      padding: 20px;
-      margin: 20px;
+    a.location-link {
+      color: #2563eb;
+      font-weight: 600;
+      text-decoration: underline;
     }
-    h1 {
-      font-size: 42px;
+    a.location-link:hover {
+      color: #1e40af;
     }
-    h2 {
-      font-size: 22px;
-    }
-  }
-</style>
+  </style>
 </head>
-<body>
-  <div class="invitation">
-    <h1>Wedding Invitation</h1>
-    <p class="section"><span class="highlight">Date:</span> Monday, 18th August 2025</p>
+<body class="py-10 px-6 text-gray-800">
+  <main
+    class="relative max-w-4xl mx-auto bg-white/90 backdrop-blur-sm shadow-2xl rounded-2xl p-8 md:p-12 border border-blue-200 z-10 invitation-border"
+    role="main"
+    aria-label="Wedding Invitation"
+  >
+    <h1
+      id="greeting"
+      class="text-4xl sm:text-5xl font-semibold script-font text-center text-blue-700 mb-6"
+    >
+      You're Invited
+    </h1>
+    <p class="text-center text-lg mb-2">To the wedding of</p>
 
-    <div class="divider"></div>
-
-    <h2>Groom</h2>
-    <p>
-      Chi. Ra. Adikarthik Shankar<br />
-      <small>(Son of Smt. N Sujatha & Shri B.V. Ravishankar)</small>
-    </p>
-
-    <h2>Bride</h2>
-    <p>
-      Chi. Sou. Dr. Nishu Srinivas<br />
-      <small>(Daughter of Smt. Jayanthi & Shri Srinivas)</small>
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>Venue</h2>
-    <p>
-      GNR Kalyana Mantapa<br />
-      18th Main Road, 4th T Block Jayanagar<br />
-      Near Ragigudda Metro Station<br />
-      Bengaluru – 560069
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>Events</h2>
-    <p><span class="highlight">Reception:</span> Sunday, 17th August 2025, from 7:00 PM onwards</p>
-    <p><span class="highlight">Muhurtha:</span> Monday, 18th August 2025, 10:00 AM to 10:50 AM</p>
-    <p><span class="highlight">Lagna:</span> Thula</p>
-
-    <div class="divider"></div>
-
-    <h2>With the blessings from</h2>
-    <p>
-      Smt. K. Sundramma & Late Shri B. Vasudev Rao<br />
-      Smt. S.V. Janakamama & Late Shri N.G. Nagaraj Rao
-    </p>
-
-    <div class="divider"></div>
-
-    <h2>Best compliments from</h2>
-    <p>Relatives & Friends</p>
-
-    <div class="footer">
-      We look forward to your presence on this joyous occasion.
+    <div class="names text-center text-3xl font-semibold text-blue-600 mb-10">
+      Chi. Ra. Adikarthik Shankar
+      <small class="block text-base font-normal text-blue-400 mt-1">
+        son of Smt. N Sujatha & Shri B.V. Ravishankar
+      </small>
+      <div class="my-6 text-xl text-gray-600 font-light">weds</div>
+      Chi. Sou. Dr. Nishu Srinivas
+      <small class="block text-base font-normal text-blue-400 mt-1">
+        daughter of Smt. Jayanthi & Shri Srinivas
+      </small>
     </div>
 
-    <div style="margin-top: 30px; font-size: 0.9em; color: #777;">
-      — <strong>Prathamesh V Narayan</strong>
-    </div>
+    <hr class="custom-hr" />
 
-    <!-- Petals -->
-    <div class="petal"></div>
-    <div class="petal"></div>
-    <div class="petal"></div>
-    <div class="petal"></div>
-    <div class="petal"></div>
-  </div>
+    <section class="mb-8 max-w-xl mx-auto text-center space-y-4 text-lg">
+      <p><strong class="text-blue-600">Reception:</strong> Sunday, 17th August 2025, from 7:00 PM onwards</p>
+      <p><strong class="text-blue-600">Muhurtha:</strong> Monday, 18th August 2025, 10:00 AM to 10:50 AM</p>
+      <p><strong class="text-blue-600">Lagna:</strong> Thula</p>
+    </section>
+
+    <hr class="custom-hr" />
+
+    <section class="mb-8 max-w-xl mx-auto text-center space-y-2 text-lg">
+      <p class="font-semibold text-blue-600">Venue</p>
+      <address class="not-italic">
+        GNR Kalyana Mantapa<br />
+        18th Main Road, 4th T Block Jayanagar<br />
+        Near Ragigudda Metro Station<br />
+        Bengaluru – 560069<br />
+        <a
+          href="https://share.google.com/QJ2xZlyVV3StLrL4D"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="location-link"
+          >View Location 🔗</a
+        >
+      </address>
+    </section>
+
+    <hr class="custom-hr" />
+
+    <section class="mb-8 max-w-xl mx-auto text-center space-y-2 text-lg">
+      <p class="font-semibold text-blue-600">With the blessings from</p>
+      <p>Smt. K. Sundramma & Late Shri B. Vasudev Rao</p>
+      <p>Smt. S.V. Janakamama & Late Shri N.G. Nagaraj Rao</p>
+    </section>
+
+    <hr class="custom-hr" />
+
+    <section class="mb-10 max-w-xl mx-auto text-center text-lg">
+      <p><strong class="text-blue-600">Best compliments from</strong></p>
+      <p>Relatives & Friends</p>
+    </section>
+
+    <footer class="text-center text-blue-500 italic font-semibold text-lg">
+      We look forward to your presence on this joyous occasion.<br />
+      <span class="block mt-6">– Prathamesh V Narayan</span>
+    </footer>
+  </main>
 </body>
 </html>
