@@ -1,53 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wedding Invitation - Prathamesh V Narayan</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
-  <style>
-    .script-font { font-family: 'Great Vibes', cursive; }
-    .title-font { font-family: 'Playfair Display', serif; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+<style>
     body {
-      background: linear-gradient(135deg, #fff5f7, #e0f7fa);
+        font-family: 'Georgia', serif;
+        background: linear-gradient(to bottom, #fff8f0, #fce6e6);
+        text-align: center;
+        padding: 30px;
+        color: #4b2e2e;
     }
-    .fade-in {
-      animation: fadeIn 1.2s ease-in-out forwards;
-      opacity: 0;
+    .container {
+        max-width: 700px;
+        margin: auto;
+        background: #ffffffcc;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    h1 {
+        font-family: 'Brush Script MT', cursive;
+        font-size: 48px;
+        color: #c41e3a;
+        margin-bottom: 10px;
     }
-  </style>
+    h2 {
+        font-size: 22px;
+        color: #6d4c41;
+        margin-bottom: 5px;
+    }
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    .highlight {
+        color: #c41e3a;
+        font-weight: bold;
+    }
+    .divider {
+        width: 60%;
+        margin: 20px auto;
+        border-top: 2px solid #c41e3a;
+    }
+    .footer {
+        margin-top: 25px;
+        font-size: 16px;
+        font-style: italic;
+    }
+</style>
 </head>
-<body class="flex items-center justify-center min-h-screen p-4">
-  <div class="bg-white/80 shadow-2xl rounded-2xl max-w-lg w-full text-center p-8 fade-in">
-    <!-- Header -->
-    <h1 class="script-font text-4xl text-pink-600 mb-2">You're Invited</h1>
-    <p class="text-gray-600 mb-4 italic">to the joyous celebration of my brother’s wedding</p>
+<body>
 
-    <!-- Names -->
-    <h2 class="script-font text-5xl text-amber-700 mb-4">Prathamesh V Narayan</h2>
+<div class="container">
+    <h1>Wedding Invitation</h1>
+    <h2>Date: Monday, 18th August 2025</h2>
 
-    <!-- Divider -->
-    <div class="border-t-2 border-amber-500 w-24 mx-auto mb-4"></div>
+    <div class="divider"></div>
 
-    <!-- Date & Location -->
-    <div class="mb-6">
-      <p class="title-font text-lg text-gray-700">📅 <strong>15th September 2025</strong></p>
-      <p class="title-font text-lg text-gray-700">📍 <strong>Grand Palace Convention Hall, Bangalore</strong></p>
-    </div>
+    <p><span class="highlight">Bridegroom:</span><br>
+    Chi. Ra. Adikarthik Shankar<br>
+    <small>(Son of Smt. N Sujatha & Shri B.V. Ravishankar)</small></p>
 
-    <!-- Event Details -->
-    <div class="bg-amber-50 p-4 rounded-lg shadow-inner mb-6">
-      <p class="title-font text-gray-700 mb-2">💍 Wedding Ceremony: 10:00 AM</p>
-      <p class="title-font text-gray-700">🍽️ Reception: 7:00 PM</p>
-    </div>
+    <p><span class="highlight">Bride:</span><br>
+    Chi. Sou. Dr. Nishu Srinivas<br>
+    <small>(Daughter of Smt. Jayanthi & Shri Srinivas)</small></p>
 
-    <!-- Footer -->
-    <p class="script-font text-xl text-pink-700 mb-4">We look forward to celebrating with you</p>
-    <p class="text-gray-500">— Prathamesh V Narayan</p>
-  </div>
+    <div class="divider"></div>
+
+    <p><span class="highlight">Venue:</span><br>
+    GNR Kalyana Mantapa<br>
+    18th Main Road, 4th T Block Jayanagar<br>
+    Near Ragigudda Metro Station<br>
+    Bengaluru – 560069</p>
+
+    <div class="divider"></div>
+
+    <p><span class="highlight">Events:</span><br>
+    <b>Reception:</b> Sunday, 17th August 2025, from 7:00 PM onwards<br>
+    <b>Muhurtha:</b> Monday, 18th August 2025, 10:00 AM to 10:50 AM<br>
+    <b>Lagna:</b> Thula</p>
+
+    <div class="divider"></div>
+
+    <p><span class="highlight">With the blessings from:</span><br>
+    Smt. K. Sundramma & Late Shri B. Vasudev Rao<br>
+    Smt. S.V. Janakamama & Late Shri N.G. Nagaraj Rao</p>
+
+    <p><span class="highlight">Best compliments from:</span><br>
+    Relatives & Friends</p>
+
+    <div class="footer">— Prathamesh V Narayan</div>
+</div>
+
 </body>
 </html>
