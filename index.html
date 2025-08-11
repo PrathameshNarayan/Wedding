@@ -3,21 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Wedding Invitation</title>
+<title>Wedding Invitation with Falling Petals</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 <style>
   body {
     margin: 0;
     padding: 0;
     background: linear-gradient(135deg, #fdf6e3, #fceabb, #f8e1ba);
-    background-size: 400% 400%;
-    animation: gradientMove 12s ease infinite;
     font-family: 'Playfair Display', serif;
     color: #5a4634;
     overflow-x: hidden;
   }
 
   .invitation {
+    position: relative;
     max-width: 850px;
     margin: 50px auto;
     background: white;
@@ -26,7 +25,6 @@
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     border: 6px solid #d4af37;
     animation: fadeIn 1.5s ease-out;
-    position: relative;
     overflow: visible;
   }
 
@@ -83,85 +81,77 @@
     }
   }
 
-  @keyframes gradientMove {
+  /* Falling petal animation */
+  @keyframes fall {
     0% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  @keyframes petalFall {
-    0% {
-      transform: translateY(0) rotate(0deg);
+      transform: translateY(-50px) rotate(0deg);
       opacity: 1;
     }
     100% {
-      transform: translateY(300px) rotate(360deg);
+      transform: translateY(350px) rotate(360deg);
       opacity: 0;
     }
   }
 
+  /* Petal styles */
   .petal {
     position: absolute;
-    top: -30px; /* start above container */
-    width: 20px;
-    height: 20px;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23d4af37" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C10.43 3.57 8.95 5.56 7.52 8.15C6.03 10.82 5 13.44 5 15C5 17.21 6.79 19 9 19C10.48 19 12.49 18 14.25 16.26C16.23 14.32 18 11.64 18 10C18 6 14 2 12 2Z"/></svg>');
-    background-size: contain;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23d4af37" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C10.43 3.57 8.95 5.56 7.52 8.15C6.03 10.82 5 13.44 5 15C5 17.21 6.79 19 9 19C10.48 19 12.49 18 14.25 16.26C16.23 14.32 18 11.64 18 10C18 6 14 2 12 2Z"/></svg>');
     background-repeat: no-repeat;
-    opacity: 0.8;
-    animation-name: petalFall;
+    background-size: contain;
+    opacity: 0.9;
+    animation-name: fall;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
 
+  /* Different petals with different horizontal positions, speeds, and delays */
   .petal:nth-child(1) {
-    left: 10%;
+    left: 5%;
     animation-duration: 12s;
     animation-delay: 0s;
   }
 
   .petal:nth-child(2) {
-    left: 30%;
-    animation-duration: 14s;
-    animation-delay: 3s;
-    width: 15px;
-    height: 15px;
-    opacity: 0.6;
-  }
-
-  .petal:nth-child(3) {
-    left: 50%;
-    animation-duration: 10s;
-    animation-delay: 6s;
+    left: 25%;
+    animation-duration: 15s;
+    animation-delay: 4s;
     width: 18px;
     height: 18px;
     opacity: 0.7;
   }
 
-  .petal:nth-child(4) {
-    left: 70%;
-    animation-duration: 13s;
-    animation-delay: 1s;
+  .petal:nth-child(3) {
+    left: 45%;
+    animation-duration: 10s;
+    animation-delay: 2s;
     width: 22px;
     height: 22px;
+    opacity: 0.8;
+  }
+
+  .petal:nth-child(4) {
+    left: 65%;
+    animation-duration: 14s;
+    animation-delay: 6s;
+    width: 20px;
+    height: 20px;
     opacity: 0.85;
   }
 
   .petal:nth-child(5) {
     left: 85%;
-    animation-duration: 15s;
-    animation-delay: 4s;
+    animation-duration: 13s;
+    animation-delay: 1s;
     width: 16px;
     height: 16px;
-    opacity: 0.65;
+    opacity: 0.75;
   }
 
+  /* Responsive */
   @media (max-width: 600px) {
     .invitation {
       padding: 20px;
