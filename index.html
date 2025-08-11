@@ -2,78 +2,96 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wedding Invitation</title>
 <style>
     body {
+        font-family: 'Georgia', serif;
+        background: #fdfcfb;
+        background: linear-gradient(to bottom right, #fdfcfb, #e8f0f7);
         margin: 0;
         padding: 0;
-        font-family: 'Georgia', serif;
-        background-color: #e6f2ff; /* Soft light blue */
-        background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
-        background-size: cover;
+        text-align: center;
         color: #333;
     }
-    .invitation-container {
+    .card {
         max-width: 700px;
-        margin: 50px auto;
-        background: rgba(255, 255, 255, 0.95);
-        border: 8px solid gold;
-        border-radius: 20px;
-        padding: 40px;
-        text-align: center;
-        box-shadow: 0 0 30px rgba(0,0,0,0.15);
+        margin: 40px auto;
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        border: 2px solid #c2d4e8;
     }
-    .title {
-        font-size: 26px;
-        font-weight: bold;
-        color: #004080;
+    h1 {
+        font-family: 'Brush Script MT', cursive;
+        font-size: 42px;
+        color: #6b4e71;
         margin-bottom: 10px;
     }
+    .greeting {
+        font-size: 20px;
+        font-style: italic;
+        color: #555;
+        margin-bottom: 30px;
+    }
     .names {
-        font-size: 22px;
+        font-size: 32px;
         font-weight: bold;
-        color: #b8860b;
+        color: #6b4e71;
         margin: 10px 0;
+    }
+    .divider {
+        margin: 20px auto;
+        width: 80px;
+        height: 3px;
+        background: #c2d4e8;
     }
     .details {
         font-size: 18px;
-        margin: 10px 0;
+        line-height: 1.6;
+        color: #444;
+        margin: 20px 0;
+    }
+    .event {
+        margin: 15px 0;
+    }
+    .event strong {
+        color: #6b4e71;
     }
     .footer {
-        font-size: 16px;
-        font-style: italic;
-        margin-top: 20px;
-        color: #555;
-    }
-    .decor-line {
-        border-top: 2px dashed gold;
-        margin: 20px auto;
-        width: 60%;
+        margin-top: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #6b4e71;
     }
 </style>
 </head>
 <body>
 
-<div class="invitation-container">
-    <div class="title">You are cordially invited to join us for the sacred celebration of my brother’s wedding</div>
-    
-    <div class="decor-line"></div>
+<div class="card">
+    <h1>Wedding Invitation</h1>
+    <p class="greeting">You are cordially invited to join us for the sacred celebration of my brother’s wedding</p>
 
-    <div class="names">
-        Chi. Ra. Adikarthik Shankar <br>
-        <small>(Son of Smt. N Sujatha & Shri B.V Ravishankar)</small>
-    </div>
-    <div class="details">weds</div>
-    <div class="names">
-        Chi. Sou. Dr. Nishu Srinivas <br>
-        <small>(Daughter of Smt. Jayanthi & Shri Srinivasa)</small>
-    </div>
-
-    <div class="decor-line"></div>
+    <div class="names">[Groom's Name] &amp; [Bride's Name]</div>
+    <div class="divider"></div>
 
     <div class="details">
-        📅 Date: 25th August 2025 <br>
-        📍 Venue: Mysore Palace Grounds
+        <div class="event">
+            <strong>Reception:</strong><br>
+            15th September 2025, 7:00 PM onwards<br>
+            Grand Ballroom, Leela Palace, Bangalore
+        </div>
+        <div class="event">
+            <strong>Lagna:</strong><br>
+            16th September 2025, 10:00 AM<br>
+            Sri Venkateshwara Kalyana Mantapa, Malleswaram
+        </div>
+        <div class="event">
+            <strong>Muhurtha:</strong><br>
+            16th September 2025, 10:30 AM<br>
+            Sri Venkateshwara Kalyana Mantapa, Malleswaram
+        </div>
     </div>
 
     <div class="footer">– Prathamesh V Narayan</div>
