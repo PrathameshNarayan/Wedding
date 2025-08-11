@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Adikarthik & Nishu's Wedding 💍" />
+    <meta property="og:description" content="Join us for the wedding celebrations of Adikarthik & Nishu in Bengaluru." />
+    <meta property="og:type" content="website" />
+
+    <title>Adikarthik & Nishu's Wedding 💍</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+      :root{
+        --royal-blue:#cfeaf8; /* soft pastel sky blue */
+        --gold:#d4af37;
+        --ivory:#fffef7;
+        --card-bg: rgba(255,255,255,0.06);
+      }
+
+      html,body{height:100%;}
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: linear-gradient(180deg, #e6f6ff 0%, var(--royal-blue) 100%);
+        margin:0;
+        -webkit-font-smoothing:antialiased;
+        -moz-osx-font-smoothing:grayscale;
+        color:#08304b;
+        padding:32px 20px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+
+      .invite-wrap{
+        width:100%;
+        max-width:900px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.92));
+        border-radius:14px;
+        padding:28px 32px;
+        position:relative;
+        box-shadow: 0 12px 30px rgba(3,16,27,0.12);
+        overflow:hidden;
+      }
+
+      /* Ornamental gold Mysore-style border using an SVG image as border-image */
+      .invite-wrap{
+        border:22px solid transparent;
+        border-image-source: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Golden_flower_border.svg');
+        border-image-slice: 50;
+        border-image-repeat: round;
+        border-image-width: 22px;
+        border-image-outset: 0;
+      }
+
+      .title {
+        font-family: 'Parisienne', cursive;
+        color: var(--gold);
+        text-align:center;
+        font-size:2.6rem;
+        margin:6px 0 6px 0;
+      }
+
+      .subtitle{
+        text-align:center;
+        color:#08304b;
+        font-weight:600;
+        margin-bottom:8px;
+      }
+
+      .blessing{
+        text-align:center;
+        font-style:italic;
+        color:#5a7486;
+        margin-bottom:6px;
+      }
+
+      .names{
+        text-align:center;
+        color:var(--gold);
+        font-size:1.6rem;
+        font-weight:700;
+        margin:6px 0;
+        font-family: 'Parisienne', cursive;
+      }
+
+      .parent-line{
+        text-align:center;
+        color:#123145;
+        margin-bottom:8px;
+      }
+
+      .hr{
+        height:3px;
+        background: linear-gradient(90deg, transparent, var(--gold), rgba(255,255,255,0.8), var(--gold), transparent);
+        border-radius:999px;
+        margin:20px auto;
+        width:90%;
+      }
+
+      .grid{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:18px;
+        margin-top:14px;
+      }
+
+      .card{
+        background: var(--card-bg);
+        padding:14px;
+        border-radius:10px;
+        border:1px solid rgba(13,37,63,0.04);
+      }
+
+      .card h4{color:var(--gold); margin-bottom:6px;}
+      .card p{color:#0b3b56; margin:0;}
+
+      .footer{
+        text-align:center;
+        margin-top:18px;
+        color:#123145;
+        font-weight:600;
+      }
+
+      @media (max-width:768px){
+        .grid{grid-template-columns:1fr;}
+        .title{font-size:2rem}
+        .names{font-size:1.4rem}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invite-wrap">
+      <p class="blessing">|| Shree Sreekanteshwara Prasanna ||</p>
+      <p class="subtitle">With the blessings from our families, we joyfully invite you to the wedding of</p>
+
+      <div class="names">Chi. Ra. Adikarthik Shankar</div>
+      <p class="parent-line">(Son of Smt. N Sujatha &amp; Sri B.V Ravishankar)</p>
+
+      <div class="names" style="margin-top:6px;">weds</div>
+
+      <div class="names">Chi. Sou. Dr. Nishu Srinivas</div>
+      <p class="parent-line">(Daughter of Smt. Jayanthi &amp; Shri Srinivasa)</p>
+
+      <div class="hr"></div>
+
+      <h3 style="text-align:center;color:var(--gold);font-family:'Parisienne',cursive;margin-bottom:10px;">Wedding Celebrations</h3>
+
+      <div class="grid">
+        <div class="card">
+          <h4>💃 Reception</h4>
+          <p><strong>Sunday, 17th August 2025</strong><br/>7:00 PM onwards</p>
+          <p style="margin-top:8px;"><strong>📌 Venue:</strong> GNR Kalyana Mantapa, Bengaluru</p>
+        </div>
+
+        <div class="card">
+          <h4>🕉️ Muhurtham</h4>
+          <p><strong>Monday, 18th August 2025</strong><br/>10:00 AM to 10:50 AM</p>
+          <p style="margin-top:8px;"><strong>📌 Venue:</strong> GNR Kalyana Mantapa, Bengaluru</p>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+
+      <p class="footer">With best compliments from Relatives &amp; Friends</p>
+
+    </div>
+  </body>
+</html>
