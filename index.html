@@ -6,93 +6,111 @@
 <title>Wedding Invitation</title>
 <style>
     body {
-        font-family: 'Georgia', serif;
-        background: linear-gradient(to bottom, #fff8f0, #fce6e6);
-        text-align: center;
-        padding: 30px;
-        color: #4b2e2e;
+        font-family: 'Times New Roman', serif;
+        background: #fef9f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
     }
-    .container {
-        max-width: 700px;
-        margin: auto;
-        background: #ffffffcc;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    .invitation {
+        background: #fff8f0;
+        border: 8px solid #d4af37;
+        padding: 40px;
+        width: 70%;
+        max-width: 800px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        background-image: url('https://www.transparenttextures.com/patterns/gold-scale.png');
+        background-size: cover;
+        position: relative;
+    }
+    .floral {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .floral.top-left {
+        top: -40px;
+        left: -40px;
+        background-image: url('https://i.ibb.co/wQ2t2F6/floral-corner.png');
+    }
+    .floral.top-right {
+        top: -40px;
+        right: -40px;
+        transform: scaleX(-1);
+        background-image: url('https://i.ibb.co/wQ2t2F6/floral-corner.png');
     }
     h1 {
-        font-family: 'Brush Script MT', cursive;
-        font-size: 48px;
-        color: #c41e3a;
-        margin-bottom: 10px;
-    }
-    h2 {
-        font-size: 22px;
-        color: #6d4c41;
+        text-align: center;
+        color: #b38b00;
+        font-size: 36px;
         margin-bottom: 5px;
     }
+    h2 {
+        text-align: center;
+        color: #8b0000;
+        margin: 5px 0;
+    }
     p {
+        text-align: center;
         font-size: 18px;
         line-height: 1.6;
+        color: #333;
     }
-    .highlight {
-        color: #c41e3a;
+    .section-title {
         font-weight: bold;
-    }
-    .divider {
-        width: 60%;
-        margin: 20px auto;
-        border-top: 2px solid #c41e3a;
-    }
-    .footer {
+        color: #b38b00;
+        font-size: 20px;
         margin-top: 25px;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .blessings, .compliments {
+        margin-top: 15px;
         font-size: 16px;
-        font-style: italic;
+        text-align: center;
     }
 </style>
 </head>
 <body>
+    <div class="invitation">
+        <div class="floral top-left"></div>
+        <div class="floral top-right"></div>
 
-<div class="container">
-    <h1>Wedding Invitation</h1>
-    <h2>Date: Monday, 18th August 2025</h2>
+        <h1>Wedding Invitation</h1>
+        <p><strong>Date:</strong> Monday, 18th August 2025</p>
 
-    <div class="divider"></div>
+        <div class="section-title">Bridegroom</div>
+        <p>Chi. Ra. Adikarthik Shankar<br>
+        (Son of Smt. N Sujatha & Shri B.V. Ravishankar)</p>
 
-    <p><span class="highlight">Bridegroom:</span><br>
-    Chi. Ra. Adikarthik Shankar<br>
-    <small>(Son of Smt. N Sujatha & Shri B.V. Ravishankar)</small></p>
+        <div class="section-title">Bride</div>
+        <p>Chi. Sou. Dr. Nishu Srinivas<br>
+        (Daughter of Smt. Jayanthi & Shri Srinivas)</p>
 
-    <p><span class="highlight">Bride:</span><br>
-    Chi. Sou. Dr. Nishu Srinivas<br>
-    <small>(Daughter of Smt. Jayanthi & Shri Srinivas)</small></p>
+        <div class="section-title">Venue</div>
+        <p>GNR Kalyana Mantapa<br>
+        18th Main Road, 4th T Block Jayanagar<br>
+        Near Ragigudda Metro Station<br>
+        Bengaluru – 560069</p>
 
-    <div class="divider"></div>
+        <div class="section-title">Events</div>
+        <p><strong>Reception:</strong> Sunday, 17th August 2025, from 7:00 PM onwards<br>
+        <strong>Muhurtha:</strong> Monday, 18th August 2025, 10:00 AM to 10:50 AM<br>
+        <strong>Lagna:</strong> Thula</p>
 
-    <p><span class="highlight">Venue:</span><br>
-    GNR Kalyana Mantapa<br>
-    18th Main Road, 4th T Block Jayanagar<br>
-    Near Ragigudda Metro Station<br>
-    Bengaluru – 560069</p>
+        <div class="section-title">With the blessings from</div>
+        <p class="blessings">
+            Smt. K. Sundramma & Late Shri B. Vasudev Rao<br>
+            Smt. S.V. Janakamama & Late Shri N.G. Nagaraj Rao
+        </p>
 
-    <div class="divider"></div>
-
-    <p><span class="highlight">Events:</span><br>
-    <b>Reception:</b> Sunday, 17th August 2025, from 7:00 PM onwards<br>
-    <b>Muhurtha:</b> Monday, 18th August 2025, 10:00 AM to 10:50 AM<br>
-    <b>Lagna:</b> Thula</p>
-
-    <div class="divider"></div>
-
-    <p><span class="highlight">With the blessings from:</span><br>
-    Smt. K. Sundramma & Late Shri B. Vasudev Rao<br>
-    Smt. S.V. Janakamama & Late Shri N.G. Nagaraj Rao</p>
-
-    <p><span class="highlight">Best compliments from:</span><br>
-    Relatives & Friends</p>
-
-    <div class="footer">— Prathamesh V Narayan</div>
-</div>
-
+        <div class="section-title">Best compliments from</div>
+        <p class="compliments">Relatives & Friends</p>
+    </div>
 </body>
 </html>
