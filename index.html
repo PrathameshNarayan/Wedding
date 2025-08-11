@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Chi. Ra. Adikarthik Shankar & Nishu Srinivas Wedding</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Existing fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Open+Sans&display=swap" rel="stylesheet" />
+  <!-- Added Dancing Script for names -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
   <style>
     /* Background dynamic gradient with slow movement */
     body {
@@ -82,13 +85,16 @@
       color: #b47d18;
     }
     h1 {
-      font-size: 5rem;
+      font-size: 3rem !important;
       margin-bottom: 1.25rem;
       font-weight: 900;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
+      line-height: 1;
+      white-space: nowrap;
+      overflow-wrap: normal;
     }
     p.subtitle {
-      font-size: 2rem;
+      font-size: 1.3rem;
       margin-bottom: 3.5rem;
       color: #a67c00;
       font-weight: 600;
@@ -96,93 +102,83 @@
       text-shadow: 0 0 3px #f3cc4e;
     }
 
-    /* Bride/Groom boxes with glowing sparkles */
-    .individual-box {
-      position: relative;
+    /* Names row container */
+    .names-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3.5rem;
+    }
+
+    .names-row .individual-box {
+      flex: 1 1 280px;
+      margin-bottom: 0;
+      text-align: center;
+      padding: 1rem 1.5rem;
       background: linear-gradient(135deg, #f9d976, #f39f27);
       border-radius: 1.75rem;
-      padding: 2.5rem 3rem 3rem; /* reduced padding */
       color: #5a3700;
       box-shadow:
         0 0 25px #ffdd55,
         inset 0 0 40px #fff8b3;
-      margin-bottom: 3.5rem;
       font-family: 'Parisienne', cursive;
-      font-size: 2.6rem; /* smaller font */
-      font-weight: 700; /* lighter weight */
-      letter-spacing: 0.03em; /* tighter spacing */
-      overflow: visible;
+      font-weight: 700;
+      letter-spacing: 0.03em;
       cursor: default;
       user-select: none;
       transition: transform 0.35s ease, box-shadow 0.4s ease;
+      position: relative;
+      overflow: visible;
     }
-    .individual-box:hover {
+    .names-row .individual-box:hover {
       transform: scale(1.06) translateY(-4px);
       box-shadow:
         0 0 30px #ffea7f,
         inset 0 0 50px #fffce1;
       z-index: 5;
     }
-    .individual-box small {
-      display: block;
-      margin-top: 0.8rem;
+
+    /* Updated font style for names: Dancing Script */
+    .names-row .person-name {
+      font-family: 'Dancing Script', cursive;
+      font-weight: 700;
+      font-size: 2.2rem;  /* Reduced font size */
+      margin-bottom: 0.3rem;
+      user-select: none;
+      color: #5a3700;
+      text-shadow:
+        0 0 12px #ffd700,
+        0 0 20px #ffdd55;
+    }
+
+    .names-row .individual-box small {
+      font-size: 1rem;
       font-family: 'Open Sans', sans-serif;
       font-weight: 600;
-      font-size: 1.35rem;
       color: #6a4d00;
-      text-shadow: 0 0 5px rgba(0 0 0 / 0.1);
+      text-shadow: 0 0 4px rgba(0 0 0 / 0.1);
+      display: block;
     }
 
-    /* Sparkle effect */
-    .individual-box::after {
-      content: '';
-      position: absolute;
-      top: -15px; left: -15px; right: -15px; bottom: -15px;
-      pointer-events: none;
-      border-radius: 2rem;
-      box-shadow:
-        0 0 15px 6px #ffd700aa,
-        0 0 25px 14px #fff8aa55,
-        0 0 50px 24px #ffe86f33;
-      animation: sparklePulse 4s ease-in-out infinite;
-      z-index: -1;
-    }
-    @keyframes sparklePulse {
-      0%, 100% {opacity: 1;}
-      50% {opacity: 0.6;}
-    }
-
-    /* Weds text with stroke-draw animation */
+    /* Weds text */
     .weds-text {
       font-family: 'Parisienne', cursive;
-      font-size: 3.6rem;
-      color: transparent;
+      font-size: 2.8rem;
+      color: #b47d18;
       font-weight: 900;
-      margin: 3rem 0 4rem;
+      margin: 0 1.5rem 0 1.5rem;
       position: relative;
       letter-spacing: 0.12em;
-      -webkit-text-stroke: 1.5px #b47d18;
-      text-stroke: 1.5px #b47d18;
+      -webkit-text-stroke: 1.2px #b47d18;
+      text-stroke: 1.2px #b47d18;
       filter: drop-shadow(0 0 10px #ffd700cc);
       user-select: none;
-      animation: strokeDraw 3s ease forwards;
-    }
-    @keyframes strokeDraw {
-      0% {
-        color: transparent;
-        -webkit-text-stroke-color: transparent;
-      }
-      70% {
-        color: transparent;
-        -webkit-text-stroke-color: #b47d18;
-      }
-      100% {
-        color: #b47d18;
-        -webkit-text-stroke-color: #b47d18;
-      }
+      animation: none;
+      align-self: center;
     }
 
-    /* Flourish SVG */
     .weds-text svg {
       position: absolute;
       bottom: -48px;
@@ -207,7 +203,6 @@
       }
     }
 
-    /* Info section styling */
     section.info-section {
       max-width: 480px;
       margin: 0 auto 4rem;
@@ -231,7 +226,6 @@
       text-shadow: 0 0 4px #f4e3a6;
     }
 
-    /* Gold gradient button */
     a.location-link {
       display: inline-block;
       margin-top: 1.5rem;
@@ -258,7 +252,6 @@
       color: #3e2a00;
     }
 
-    /* Footer */
     footer {
       font-style: italic;
       color: #b47d18;
@@ -276,23 +269,29 @@
       font-size: 1.5rem;
     }
 
-    /* Responsive */
     @media (max-width: 640px) {
       h1 {
-        font-size: 3rem;
+        font-size: 3rem !important;
       }
-      .individual-box {
-        font-size: 2rem;  /* smaller on mobile */
-        padding: 2rem 2.5rem 2.5rem;
+      .names-row {
+        flex-direction: column;
+        gap: 2rem;
       }
-      .weds-text {
-        font-size: 2.8rem;
-        margin: 2.5rem 0 3.5rem;
+      .names-row .weds-text {
+        margin: 0 0 0 0;
+        font-size: 2.4rem;
       }
-      .weds-text svg {
-        width: 110px;
-        height: 38px;
-        bottom: -38px;
+      .names-row .individual-box {
+        flex: none;
+        width: 100%;
+        font-size: 2rem;
+        padding: 1.5rem 1.5rem;
+      }
+      .names-row .person-name {
+        font-size: 1.8rem;
+      }
+      .names-row .individual-box small {
+        font-size: 0.9rem;
       }
       section.info-section {
         max-width: 100%;
@@ -310,7 +309,6 @@
       }
     }
 
-    /* Floral petals animation container */
     .petals-container {
       pointer-events: none;
       position: fixed;
@@ -332,7 +330,6 @@
       filter: drop-shadow(0 0 2px #e082b5);
     }
 
-    /* Different animations for petals */
     @keyframes fallRotate1 {
       0% {
         transform: translateY(0) rotate(0deg);
@@ -363,7 +360,6 @@
         opacity: 0;
       }
     }
-
   </style>
 </head>
 <body>
@@ -371,21 +367,23 @@
     <h1 class="script-font">You're Invited</h1>
     <p class="subtitle">To the wedding of</p>
 
-    <div class="individual-box" aria-label="Groom details">
-      Chi. Ra. Adikarthik Shankar
-      <small>son of Smt. N Sujatha & Shri B.V. Ravishankar</small>
-    </div>
+    <div class="names-row" role="group" aria-label="Bride and Groom names">
+      <div class="individual-box" aria-label="Groom details">
+        <div class="person-name">Chi. Ra. Adikarthik Shankar</div>
+        <small>(son of Smt. N Sujatha & Shri B.V. Ravishankar)</small>
+      </div>
 
-    <div class="weds-text" aria-hidden="true">
-      weds
-      <svg viewBox="0 0 120 40" aria-hidden="true" focusable="false" >
-        <path d="M10 30 Q40 5 70 30 T110 30" />
-      </svg>
-    </div>
+      <div class="weds-text" aria-hidden="true" >
+        weds
+        <svg viewBox="0 0 120 40" aria-hidden="true" focusable="false" >
+          <path d="M10 30 Q40 5 70 30 T110 30" />
+        </svg>
+      </div>
 
-    <div class="individual-box" aria-label="Bride details">
-      Chi. Sou. Dr. Nishu Srinivas
-      <small>daughter of Smt. Jayanthi & Shri Srinivas</small>
+      <div class="individual-box" aria-label="Bride details">
+        <div class="person-name">Chi. Sou. Dr. Nishu Srinivas</div>
+        <small>(daughter of Smt. Jayanthi & Shri Srinivas)</small>
+      </div>
     </div>
 
     <hr class="custom-hr" style="border:none; height:4px; margin:4rem auto; width:80%; background: linear-gradient(to right, transparent, #b47d18, #ffdc64, #b47d18, transparent); border-radius:9999px; box-shadow: 0 0 20px #ffd700cc;" />
@@ -450,4 +448,10 @@
       const petal = document.createElement('div');
       petal.classList.add('petal');
 
-      // Random horizontal start position (
+      // Random horizontal start position
+      petal.style.left = `${random(0, 100)}vw`;
+
+      // Random animation duration and delay
+      const duration = random(8, 15);
+      const delay = random(0, 10);
+      const animationType =
