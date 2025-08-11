@@ -1,170 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="Adikarthik & Nishu's Wedding 💍" />
-    <meta property="og:description" content="Join us for the wedding celebrations of Adikarthik & Nishu in Bengaluru." />
-    <meta property="og:type" content="website" />
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adikarthik & Nishu — Wedding Invitation</title>
 
-    <title>Adikarthik & Nishu's Wedding 💍</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <style>
-      :root{
-        --royal-blue:#cfeaf8; /* soft pastel sky blue */
-        --gold:#d4af37;
-        --ivory:#fffef7;
-        --card-bg: rgba(255,255,255,0.06);
-      }
+  <style>
+    :root{
+      --soft-blue: #cfeaf0;    /* overall page gradient */
+      --card-ivory: #fbfcfd;   /* card background */
+      --gold: #c9a33b;         /* decorative/gold color */
+      --text-dark: #08304b;    /* primary text */
+      --muted: #5a7486;
+    }
 
-      html,body{height:100%;}
-      body {
-        font-family: "Open Sans", sans-serif;
-        background: linear-gradient(180deg, #e6f6ff 0%, var(--royal-blue) 100%);
-        margin:0;
-        -webkit-font-smoothing:antialiased;
-        -moz-osx-font-smoothing:grayscale;
-        color:#08304b;
-        padding:32px 20px;
-        display:flex;
-        align-items:center;
-        justify-content:center;
-      }
+    html,body{height:100%;margin:0;}
+    body{
+      background: linear-gradient(180deg,#eaf9ff 0%, var(--soft-blue) 100%);
+      font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: var(--text-dark);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+    }
 
-      .invite-wrap{
-        width:100%;
-        max-width:900px;
-        background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.92));
-        border-radius:14px;
-        padding:28px 32px;
-        position:relative;
-        box-shadow: 0 12px 30px rgba(3,16,27,0.12);
-        overflow:hidden;
-      }
+    /* Card / Invite container */
+    .invite {
+      width:100%;
+      max-width:880px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.96));
+      border-radius:14px;
+      padding:34px;
+      box-shadow: 0 18px 40px rgba(3,16,27,0.12);
+      position:relative;
+      overflow:hidden;
+      border:20px solid transparent;
+      /* Decorative border image (gold floral) */
+      border-image-source: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Golden_flower_border.svg');
+      border-image-slice: 50;
+      border-image-repeat: round;
+      border-image-width: 22px;
+    }
 
-      /* Ornamental gold Mysore-style border using an SVG image as border-image */
-      .invite-wrap{
-        border:22px solid transparent;
-        border-image-source: url('https://upload.wikimedia.org/wikipedia/commons/0/0e/Golden_flower_border.svg');
-        border-image-slice: 50;
-        border-image-repeat: round;
-        border-image-width: 22px;
-        border-image-outset: 0;
-      }
+    .greeting {
+      text-align:center;
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size:1.25rem;
+      font-weight:600;
+      margin:4px 0 18px;
+      line-height:1.35;
+    }
 
-      .title {
-        font-family: 'Parisienne', cursive;
-        color: var(--gold);
-        text-align:center;
-        font-size:2.6rem;
-        margin:6px 0 6px 0;
-      }
+    .lead {
+      text-align:center;
+      color: var(--muted);
+      font-size:0.98rem;
+      margin-bottom:14px;
+    }
 
-      .subtitle{
-        text-align:center;
-        color:#08304b;
-        font-weight:600;
-        margin-bottom:8px;
-      }
+    .names {
+      text-align:center;
+      color: var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size:1.85rem;
+      font-weight:700;
+      margin:6px 0 6px;
+    }
 
-      .blessing{
-        text-align:center;
-        font-style:italic;
-        color:#5a7486;
-        margin-bottom:6px;
-      }
+    .subline {
+      text-align:center;
+      color:var(--text-dark);
+      margin-bottom:10px;
+      font-weight:600;
+    }
 
-      .names{
-        text-align:center;
-        color:var(--gold);
-        font-size:1.6rem;
-        font-weight:700;
-        margin:6px 0;
-        font-family: 'Parisienne', cursive;
-      }
+    .small {
+      text-align:center;
+      color:#123145;
+      font-size:0.98rem;
+      margin-bottom:10px;
+    }
 
-      .parent-line{
-        text-align:center;
-        color:#123145;
-        margin-bottom:8px;
-      }
+    .divider {
+      width:88%;
+      height:3px;
+      margin:22px auto;
+      background: linear-gradient(90deg, transparent, var(--gold), rgba(255,255,255,0.85), var(--gold), transparent);
+      border-radius:999px;
+    }
 
-      .hr{
-        height:3px;
-        background: linear-gradient(90deg, transparent, var(--gold), rgba(255,255,255,0.8), var(--gold), transparent);
-        border-radius:999px;
-        margin:20px auto;
-        width:90%;
-      }
+    .events {
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+      margin-top:8px;
+    }
 
-      .grid{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:18px;
-        margin-top:14px;
-      }
+    .event-card {
+      background: rgba(255,255,255,0.85);
+      border-radius:10px;
+      padding:14px 12px;
+      border:1px solid rgba(0,0,0,0.03);
+      box-shadow: 0 2px 8px rgba(3,16,27,0.04);
+    }
+    .event-card h4{
+      margin:0 0 8px;
+      color:var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size:1.05rem;
+    }
+    .event-card p{ margin:4px 0; color:var(--text-dark); font-size:0.98rem; }
 
-      .card{
-        background: var(--card-bg);
-        padding:14px;
-        border-radius:10px;
-        border:1px solid rgba(13,37,63,0.04);
-      }
+    .footer {
+      text-align:center;
+      margin-top:20px;
+      color:#123145;
+      font-weight:600;
+      font-size:0.98rem;
+    }
 
-      .card h4{color:var(--gold); margin-bottom:6px;}
-      .card p{color:#0b3b56; margin:0;}
+    .tagline {
+      margin-top:18px;
+      text-align:center;
+      color:var(--gold);
+      font-family: "Playfair Display", serif;
+      font-size:1.05rem;
+      font-weight:600;
+    }
 
-      .footer{
-        text-align:center;
-        margin-top:18px;
-        color:#123145;
-        font-weight:600;
-      }
+    /* responsive */
+    @media (max-width:780px){
+      .invite{ padding:20px; border-width:16px; }
+      .names{ font-size:1.4rem; }
+      .events{ grid-template-columns:1fr; }
+      .greeting{ font-size:1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="invite" role="article" aria-label="Wedding invitation for Adikarthik and Nishu">
 
-      @media (max-width:768px){
-        .grid{grid-template-columns:1fr;}
-        .title{font-size:2rem}
-        .names{font-size:1.4rem}
-      }
-    </style>
-  </head>
-  <body>
-    <div class="invite-wrap">
-      <p class="blessing">|| Shree Sreekanteshwara Prasanna ||</p>
-      <p class="subtitle">With the blessings from our families, we joyfully invite you to the wedding of</p>
+    <!-- Greeting line (final phrasing you chose) -->
+    <div class="greeting">
+      You are cordially invited to be part of the sacred celebration of my brother’s wedding
+    </div>
 
-      <div class="names">Chi. Ra. Adikarthik Shankar</div>
-      <p class="parent-line">(Son of Smt. N Sujatha &amp; Sri B.V Ravishankar)</p>
+    <div class="lead">We request the pleasure of your company as we celebrate the union</div>
 
-      <div class="names" style="margin-top:6px;">weds</div>
+    <!-- Groom -->
+    <div class="names">Chi. Ra. Adikarthik Shankar</div>
+    <div class="small">(Son of Smt. N Sujatha &amp; Sri B.V. Ravishankar)</div>
 
-      <div class="names">Chi. Sou. Dr. Nishu Srinivas</div>
-      <p class="parent-line">(Daughter of Smt. Jayanthi &amp; Shri Srinivasa)</p>
+    <!-- 'weds' separator -->
+    <div class="subline">weds</div>
 
-      <div class="hr"></div>
+    <!-- Bride -->
+    <div class="names">Chi. Sou. Dr. Nishu Srinivas</div>
+    <div class="small">(Daughter of Smt. Jayanthi &amp; Shri Srinivasa)</div>
 
-      <h3 style="text-align:center;color:var(--gold);font-family:'Parisienne',cursive;margin-bottom:10px;">Wedding Celebrations</h3>
+    <div class="divider" aria-hidden="true"></div>
 
-      <div class="grid">
-        <div class="card">
-          <h4>💃 Reception</h4>
-          <p><strong>Sunday, 17th August 2025</strong><br/>7:00 PM onwards</p>
-          <p style="margin-top:8px;"><strong>📌 Venue:</strong> GNR Kalyana Mantapa, Bengaluru</p>
-        </div>
+    <h3 style="text-align:center;color:var(--gold);font-family:'Playfair Display',serif;margin:0 0 12px;">Wedding Celebrations</h3>
 
-        <div class="card">
-          <h4>🕉️ Muhurtham</h4>
-          <p><strong>Monday, 18th August 2025</strong><br/>10:00 AM to 10:50 AM</p>
-          <p style="margin-top:8px;"><strong>📌 Venue:</strong> GNR Kalyana Mantapa, Bengaluru</p>
-        </div>
+    <div class="events" aria-label="Event details">
+      <div class="event-card" role="region" aria-label="Reception">
+        <h4>💃 Reception</h4>
+        <p><strong>Sunday, 17th August 2025</strong></p>
+        <p>7:00 PM onwards</p>
+        <p style="margin-top:8px;"><strong>📌 Venue:</strong> GNR Kalyana Mantapa, Bengaluru</p>
       </div>
 
-      <div class="hr"></div>
-
-      <p class="footer">With best compliments from Relatives &amp; Friends</p>
-
+      <div class="event-card" role="region" aria-label="Muhurtham">
+        <h4>🕉️ Muhurtham</h4>
+        <p><strong>Monday, 18th August 2025</strong></p>
+        <p>10:00 AM to 10:50 AM</p>
+        <p style="margin-top:8px;"><strong>📌 Venue:</strong> GNR Kalyana Mantapa, Bengaluru</p>
+      </div>
     </div>
-  </body>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <div class="footer">With best compliments from Relatives &amp; Friends</div>
+
+    <!-- Tag line requested -->
+    <div class="tagline">— Prathamesh V Narayan</div>
+
+  </div>
+</body>
 </html>
