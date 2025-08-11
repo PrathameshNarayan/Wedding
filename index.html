@@ -6,7 +6,6 @@
 <title>Wedding Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 <style>
-  /* Soft gradient background */
   body {
     margin: 0;
     padding: 0;
@@ -18,7 +17,6 @@
     overflow-x: hidden;
   }
 
-  /* Invitation Card Styling */
   .invitation {
     max-width: 850px;
     margin: 50px auto;
@@ -29,10 +27,9 @@
     border: 6px solid #d4af37;
     animation: fadeIn 1.5s ease-out;
     position: relative;
-    overflow: visible; /* so petals show outside if needed */
+    overflow: visible;
   }
 
-  /* Headings */
   h1 {
     font-family: 'Great Vibes', cursive;
     font-size: 60px;
@@ -48,7 +45,6 @@
     font-weight: bold;
   }
 
-  /* Text styling */
   .highlight {
     color: #d4af37;
     font-weight: bold;
@@ -64,21 +60,18 @@
     font-size: 14px;
   }
 
-  /* Divider styling */
   .divider {
     border-top: 2px dashed #d4af37;
     margin: 30px auto;
     width: 60%;
   }
 
-  /* Footer */
   .footer {
     margin-top: 20px;
     font-size: 16px;
     color: #7c6f57;
   }
 
-  /* Animations */
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -102,22 +95,20 @@
     }
   }
 
-  /* Petal fall animation */
   @keyframes petalFall {
     0% {
-      transform: translateY(-10px) rotate(0deg);
+      transform: translateY(0) rotate(0deg);
       opacity: 1;
     }
     100% {
-      transform: translateY(150px) rotate(360deg);
+      transform: translateY(300px) rotate(360deg);
       opacity: 0;
     }
   }
 
-  /* Petal container */
   .petal {
     position: absolute;
-    bottom: 0;
+    top: -30px; /* start above container */
     width: 20px;
     height: 20px;
     background-image: url('data:image/svg+xml;utf8,<svg fill="%23d4af37" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C10.43 3.57 8.95 5.56 7.52 8.15C6.03 10.82 5 13.44 5 15C5 17.21 6.79 19 9 19C10.48 19 12.49 18 14.25 16.26C16.23 14.32 18 11.64 18 10C18 6 14 2 12 2Z"/></svg>');
@@ -129,7 +120,6 @@
     animation-iteration-count: infinite;
   }
 
-  /* Different petals with delays and horizontal start positions */
   .petal:nth-child(1) {
     left: 10%;
     animation-duration: 12s;
@@ -172,7 +162,6 @@
     opacity: 0.65;
   }
 
-  /* Mobile responsiveness */
   @media (max-width: 600px) {
     .invitation {
       padding: 20px;
