@@ -1,130 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Wedding Invitation</title>
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
 <style>
-    /* Soft gradient background */
-    body {
-        margin: 0;
-        padding: 0;
-        background: linear-gradient(135deg, #fdf6e3, #fceabb, #f8e1ba);
-        background-size: 400% 400%;
-        animation: gradientMove 12s ease infinite;
-        font-family: 'Playfair Display', serif;
-        color: #5a4634;
-    }
+  /* Soft gradient background */
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #fdf6e3, #fceabb, #f8e1ba);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    font-family: 'Playfair Display', serif;
+    color: #5a4634;
+    overflow-x: hidden;
+  }
 
-    /* Invitation Card Styling */
+  /* Invitation Card Styling */
+  .invitation {
+    max-width: 850px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    border: 6px solid #d4af37;
+    animation: fadeIn 1.5s ease-out;
+    position: relative;
+    overflow: visible; /* so petals show outside if needed */
+  }
+
+  /* Headings */
+  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    color: #a67c00;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 26px;
+    color: #8b5e3c;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  /* Text styling */
+  .highlight {
+    color: #d4af37;
+    font-weight: bold;
+  }
+
+  .section {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  small {
+    color: #777;
+    font-size: 14px;
+  }
+
+  /* Divider styling */
+  .divider {
+    border-top: 2px dashed #d4af37;
+    margin: 30px auto;
+    width: 60%;
+  }
+
+  /* Footer */
+  .footer {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #7c6f57;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Petal fall animation */
+  @keyframes petalFall {
+    0% {
+      transform: translateY(-10px) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(150px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+  /* Petal container */
+  .petal {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23d4af37" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C10.43 3.57 8.95 5.56 7.52 8.15C6.03 10.82 5 13.44 5 15C5 17.21 6.79 19 9 19C10.48 19 12.49 18 14.25 16.26C16.23 14.32 18 11.64 18 10C18 6 14 2 12 2Z"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    animation-name: petalFall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /* Different petals with delays and horizontal start positions */
+  .petal:nth-child(1) {
+    left: 10%;
+    animation-duration: 12s;
+    animation-delay: 0s;
+  }
+
+  .petal:nth-child(2) {
+    left: 30%;
+    animation-duration: 14s;
+    animation-delay: 3s;
+    width: 15px;
+    height: 15px;
+    opacity: 0.6;
+  }
+
+  .petal:nth-child(3) {
+    left: 50%;
+    animation-duration: 10s;
+    animation-delay: 6s;
+    width: 18px;
+    height: 18px;
+    opacity: 0.7;
+  }
+
+  .petal:nth-child(4) {
+    left: 70%;
+    animation-duration: 13s;
+    animation-delay: 1s;
+    width: 22px;
+    height: 22px;
+    opacity: 0.85;
+  }
+
+  .petal:nth-child(5) {
+    left: 85%;
+    animation-duration: 15s;
+    animation-delay: 4s;
+    width: 16px;
+    height: 16px;
+    opacity: 0.65;
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 600px) {
     .invitation {
-        max-width: 850px;
-        margin: 50px auto;
-        background: white;
-        border-radius: 20px;
-        padding: 40px;
-        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-        border: 6px solid #d4af37;
-        animation: fadeIn 1.5s ease-out;
+      padding: 20px;
+      margin: 20px;
     }
-
-    /* Headings */
     h1 {
-        font-family: 'Great Vibes', cursive;
-        font-size: 60px;
-        color: #a67c00;
-        margin-bottom: 10px;
+      font-size: 42px;
     }
-
     h2 {
-        font-size: 26px;
-        color: #8b5e3c;
-        margin-top: 30px;
-        margin-bottom: 10px;
-        font-weight: bold;
+      font-size: 22px;
     }
-
-    /* Text styling */
-    .highlight {
-        color: #d4af37;
-        font-weight: bold;
-    }
-
-    .section {
-        font-size: 18px;
-        line-height: 1.8;
-    }
-
-    small {
-        color: #777;
-        font-size: 14px;
-    }
-
-    /* Divider styling */
-    .divider {
-        border-top: 2px dashed #d4af37;
-        margin: 30px auto;
-        width: 60%;
-    }
-
-    /* Footer */
-    .footer {
-        margin-top: 20px;
-        font-size: 16px;
-        color: #7c6f57;
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(30px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes gradientMove {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    /* Mobile responsiveness */
-    @media (max-width: 600px) {
-        .invitation {
-            padding: 20px;
-            margin: 20px;
-        }
-        h1 {
-            font-size: 42px;
-        }
-        h2 {
-            font-size: 22px;
-        }
-    }
+  }
 </style>
 </head>
 <body>
-
-<div class="invitation">
+  <div class="invitation">
     <h1>Wedding Invitation</h1>
     <p class="section"><span class="highlight">Date:</span> Monday, 18th August 2025</p>
 
     <div class="divider"></div>
 
     <h2>Groom</h2>
-    <p>Chi. Ra. Adikarthik Shankar<br>
-    <small>(Son of Smt. N Sujatha & Shri B.V. Ravishankar)</small></p>
+    <p>
+      Chi. Ra. Adikarthik Shankar<br />
+      <small>(Son of Smt. N Sujatha & Shri B.V. Ravishankar)</small>
+    </p>
 
     <h2>Bride</h2>
-    <p>Chi. Sou. Dr. Nishu Srinivas<br>
-    <small>(Daughter of Smt. Jayanthi & Shri Srinivas)</small></p>
+    <p>
+      Chi. Sou. Dr. Nishu Srinivas<br />
+      <small>(Daughter of Smt. Jayanthi & Shri Srinivas)</small>
+    </p>
 
     <div class="divider"></div>
 
     <h2>Venue</h2>
-    <p>GNR Kalyana Mantapa<br>
-        18th Main Road, 4th T Block Jayanagar<br>
-        Near Ragigudda Metro Station<br>
-        Bengaluru – 560069</p>
+    <p>
+      GNR Kalyana Mantapa<br />
+      18th Main Road, 4th T Block Jayanagar<br />
+      Near Ragigudda Metro Station<br />
+      Bengaluru – 560069
+    </p>
 
     <div class="divider"></div>
 
@@ -136,8 +226,10 @@
     <div class="divider"></div>
 
     <h2>With the blessings from</h2>
-    <p>Smt. K. Sundramma & Late Shri B. Vasudev Rao<br>
-        Smt. S.V. Janakamama & Late Shri N.G. Nagaraj Rao</p>
+    <p>
+      Smt. K. Sundramma & Late Shri B. Vasudev Rao<br />
+      Smt. S.V. Janakamama & Late Shri N.G. Nagaraj Rao
+    </p>
 
     <div class="divider"></div>
 
@@ -145,13 +237,19 @@
     <p>Relatives & Friends</p>
 
     <div class="footer">
-        We look forward to your presence on this joyous occasion.
+      We look forward to your presence on this joyous occasion.
     </div>
 
     <div style="margin-top: 30px; font-size: 0.9em; color: #777;">
-        — <strong>Prathamesh V Narayan</strong>
+      — <strong>Prathamesh V Narayan</strong>
     </div>
-</div>
 
+    <!-- Petals -->
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+  </div>
 </body>
 </html>
